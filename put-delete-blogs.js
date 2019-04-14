@@ -21,7 +21,7 @@ router.delete('/:id', (req, res) => {
 // of that, log error and send back status code 400. otherwise
 // call `ShoppingList.update` with updated item.
 router.put('/:id', jsonParser, (req, res) => {
-  const requiredFields = ['title', 'content', 'author', 'publishDate', 'id'];
+  const requiredFields = ['title', 'content', 'author', 'id'];
   for (let i=0; i<requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
